@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "v-maintain",
+    "name": "V-Maintain",
     "slug": "v-maintain",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,10 +20,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.varunvenkat.VMaintain"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a696ec35-07a4-4919-817d-c3b6686be515"
+      }
+    },
+    "owner": "varunvenkat"
   }
 }
