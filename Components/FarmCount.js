@@ -48,7 +48,7 @@ const FarmCount = ({ URL, CountURL }) => {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <StatusBar/>
+          <StatusBar />
           <ActivityIndicator size="large" />
         </View>
       ) : (
@@ -76,26 +76,24 @@ const FarmCount = ({ URL, CountURL }) => {
             {selectedValue} கொட்டகையின் எண்ணிக்கை -{" "}
             <Text style={{ color: "red", fontSize: 30 }}>{count}</Text>
           </Text>
+
+          <View style={styles.tables}>
+            <Text style={styles.tableText}>டிரைவர் பெயர்</Text>
+            <Text style={styles.tableText}>ஊர் பெயர்</Text>
+            <Text style={styles.tableText}>எண்ணிக்கை</Text>
+          </View>
+          <ScrollView style={styles.MainTable}>
+            {data &&
+              data.map((item, index) => (
+                <View key={index} style={styles.tablesData}>
+                  <Text style={styles.text}>{item.DriverName}</Text>
+                  <Text style={styles.text}>{item.VillageName}</Text>
+                  <Text style={styles.text}>{item.TotalFarmLoaded}</Text>
+                </View>
+              ))}
+          </ScrollView>
         </>
       )}
-      <View style={styles.MainTable}>
-        <View style={styles.tables}>
-          <Text style={styles.tableText}>டிரைவர் பெயர்</Text>
-          <Text style={styles.tableText}>ஊர் பெயர்</Text>
-          <Text style={styles.tableText}>எண்ணிக்கை</Text>
-        </View>
-
-        {data &&
-          data.map((item, index) => (
-            <ScrollView key={index}>
-              <View style={styles.tablesData} >
-                <Text style={styles.text}>{item.DriverName}</Text>
-                <Text style={styles.text}>{item.VillageName}</Text>
-                <Text style={styles.text}>{item.TotalFarmLoaded}</Text>
-              </View>
-            </ScrollView>
-          ))}
-      </View>
     </>
   );
 };

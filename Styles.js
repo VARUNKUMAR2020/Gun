@@ -38,34 +38,30 @@ const styles = StyleSheet.create({
   },
   Billing: {
     marginHorizontal: 100,
-    color:"red"
+    color: "red",
   },
   contact: {
     flex: 1,
     justifyContent: "center",
   },
-  MainTable: {
-    marginTop: 20,
-    margin: 3,
-  },
   tables: {
     flexDirection: "row",
     justifyContent: "space-between",
+    marginTop: 20,
   },
   tableText: {
     color: "blue",
-    flex:1,
-    textAlign:"center"
+    flex: 1,
+    textAlign: "center",
   },
-  text:{
-   fontWeight:"800",
-   flex:1,
-    textAlign:"center"
+  text: {
+    fontWeight: "800",
+    flex: 1,
+    textAlign: "center",
   },
   tablesData: {
-    flexDirection:"row",
-    justifyContent:"space-between",
-    marginTop: 4,
+    flexDirection: "row",
+    justifyContent: "space-between",
     borderRadius: 5,
     borderStyle: "solid",
     padding: 5,
@@ -78,40 +74,40 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
   },
-  input:{
-    height:35,
-    padding:10,
-    borderColor:"black",
-    borderWidth:2,
-    color:"black"
+  input: {
+    height: 35,
+    padding: 10,
+    borderColor: "black",
+    borderWidth: 2,
+    color: "black",
   },
-  inputField:{
-     margin:30
+  inputField: {
+    margin: 30,
   },
-  inputText:{
-    marginVertical:10,
-    textDecorationLine:"underline",
-    fontWeight:"bold"
+  inputText: {
+    marginVertical: 10,
+    textDecorationLine: "underline",
+    fontWeight: "bold",
   },
-  salaryInput:{
-    height:30,
-    width:100,
-    borderWidth:2,
-    textAlign:"center",
+  salaryInput: {
+    height: 30,
+    width: 100,
+    borderWidth: 2,
+    textAlign: "center",
   },
-  salaryText:{
-    fontWeight:"bold"
+  salaryText: {
+    fontWeight: "bold",
   },
-  salaryContainer:{
-    marginVertical:10,
-    display:"flex",
-    flexDirection:"row",
-    justifyContent:"space-around",
-    alignItems:"center",
+  salaryContainer: {
+    marginVertical: 10,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
-  MainContainer:{
-    marginVertical:100
-  }
+  MainContainer: {
+    marginVertical: 100,
+  },
 });
 
 export default styles;
