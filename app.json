@@ -3,7 +3,7 @@
     "name": "V-Maintain",
     "slug": "v-maintain",
     "version": "1.0.0",
-    "orientation": "",
+    "orientation": "default", 
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -31,6 +31,12 @@
         "projectId": "8f4add7a-9583-4fff-bc53-7766f9ed00da"
       }
     },
-    "owner": "varunvenkat"
+    "owner": "varunvenkat",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8f4add7a-9583-4fff-bc53-7766f9ed00da"
+    }
   }
 }

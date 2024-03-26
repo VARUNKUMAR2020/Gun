@@ -4,7 +4,6 @@ import {
   Text,
   ActivityIndicator,
   FlatList,
-  ScrollView,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import axios from "axios";
@@ -41,6 +40,15 @@ const FarmCount = ({ URL, CountURL }) => {
       console.log("Error", error);
     }
   }, [selectedValue]);
+
+  // Render item function for FlatList
+  const renderItem = ({ item }) => (
+    <View style={styles.tablesData}>
+      <Text style={styles.text}>{item.DriverName}</Text>
+      <Text style={styles.text}>{item.VillageName}</Text>
+      <Text style={styles.text}>{item.TotalFarmLoaded}</Text>
+    </View>
+  );
 
   return (
     <>
@@ -82,16 +90,12 @@ const FarmCount = ({ URL, CountURL }) => {
             <Text style={styles.tableText}>ஊர் பெயர்</Text>
             <Text style={styles.tableText}>எண்ணிக்கை</Text>
           </View>
-          <ScrollView style={styles.MainTable}>
-            {data &&
-              data.map((item, index) => (
-                <View key={index} style={styles.tablesData}>
-                  <Text style={styles.text}>{item.DriverName}</Text>
-                  <Text style={styles.text}>{item.VillageName}</Text>
-                  <Text style={styles.text}>{item.TotalFarmLoaded}</Text>
-                </View>
-              ))}
-          </ScrollView>
+          <FlatList
+            style={styles.MainTable}
+            data={data}
+            renderItem={renderItem}
+            keyExtractor={(item, index) => index.toString()}
+          />
         </>
       )}
     </>

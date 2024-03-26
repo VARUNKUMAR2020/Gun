@@ -10,7 +10,6 @@ const img = require("../assets/v.webp");
 const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar />
       <ImageBackground source={img} style={{ flex: 1 }}>
         <View style={styles.backgroundImage}>
           {/* Header */}

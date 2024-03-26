@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,7 +7,6 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import styles from "../Styles";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 const AddFarm = ({ URL }) => {
@@ -54,53 +54,58 @@ const AddFarm = ({ URL }) => {
   }, [VehicleNumber, DriverName, PhoneNumber, VillageName, TotalFarmLoaded]);
 
   return (
-    <KeyboardAvoidingView behavior="padding">
-      <Text style={styles.addFarm}>நிரப்பப்பட வேண்டிய விவரங்கள்</Text>
-      <View style={styles.inputField}>
-        <Text style={styles.inputText}>ஓட்டுநரின் பெயர் :-</Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={(text) => setDriverName(text)}
-          value={DriverName}
-        />
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior="padding"
+      keyboardVerticalOffset={100} // Adjust this value as needed
+    >
+      <View style={{ flex: 1 }}>
+        <Text style={styles.addFarm}>நிரப்பப்பட வேண்டிய விவரங்கள்</Text>
+        <View style={styles.inputField}>
+          <Text style={styles.inputText}>ஓட்டுநரின் பெயர் :-</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => setDriverName(text)}
+            value={DriverName}
+          />
 
-        <Text style={styles.inputText}>வாகன எண் :-</Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={(text) => setVehicleNumber(text)}
-          value={VehicleNumber}
-        />
+          <Text style={styles.inputText}>வாகன எண் :-</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => setVehicleNumber(text)}
+            value={VehicleNumber}
+          />
 
-        <Text style={styles.inputText}>கைபேசி எண் :-</Text>
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          onChangeText={(text) => setPhoneNumber(text)}
-          value={PhoneNumber}
-        />
+          <Text style={styles.inputText}>கைபேசி எண் :-</Text>
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            onChangeText={(text) => setPhoneNumber(text)}
+            value={PhoneNumber}
+          />
 
-        <Text style={styles.inputText}>கொட்டகை ஏற்றப்பட்ட கிராமம் :-</Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={(text) => setVillageName(text)}
-          value={VillageName}
-        />
+          <Text style={styles.inputText}>கொட்டகை ஏற்றப்பட்ட கிராமம் :-</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => setVillageName(text)}
+            value={VillageName}
+          />
 
-        <Text style={styles.inputText}>கொட்டகை ஏற்றப்பட்ட எண்ணிக்கை :-</Text>
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          onChangeText={(text) => setTotalFarmLoaded(text)}
-          value={TotalFarmLoaded}
-        />
-      </View>
-
-      <View>
-        <Button
-          title="கொட்டகை சேர்க்க"
-          disabled={button}
-          onPress={() => handleSubmitData()}
-        />
+          <Text style={styles.inputText}>கொட்டகை ஏற்றப்பட்ட எண்ணிக்கை :-</Text>
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            onChangeText={(text) => setTotalFarmLoaded(text)}
+            value={TotalFarmLoaded}
+          />
+        </View>
+        <View>
+          <Button
+            title="கொட்டகை சேர்க்க"
+            disabled={button}
+            onPress={() => handleSubmitData()}
+          />
+        </View>
       </View>
     </KeyboardAvoidingView>
   );

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontSize: 25,
     paddingLeft: 30,
-    color: "red",
+    color: "white",
     textDecorationLine: "underline",
   },
   center: {
